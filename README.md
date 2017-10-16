@@ -126,3 +126,5 @@ Initially, using gradients to detect lane lines failed. Gradients took too much 
 I also faced issues when I tried to find centroids and now I'm using histogram to identify where lane lines are
 
 My current implementations fails to solve challenging videos even it shows good results in project video. I think if investigate more how to get rid of a gradient noise and improve color space detection (maybe using other olor spaces or tune parameters). I'll be able to solve challenge videos
+
+In the end I found (thanks for reviewer) that radius of curvature was not correct, so I did some investigation and found out that my warped image is about 10 meters, so I changed my `ym_per_pixels` to appropriate value and results become much more realistic 
